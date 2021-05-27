@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dethales</title>
+</head>
+<body style="background-color: rgb(5, 51, 5);">
+
+    <h1 style="border: 5px solid black; background-color: antiquewhite; border-color:black; font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif, Courier, monospace; color: rgb(10, 10, 10); text-align: center;">Seu cadastro foi realizado com sucesso !!!</h1>
+    <br></br> <br></br>
+
+    <h2 style="color:aliceblue;" th:text="${cadastro.nome}"></h2>
+    <h2 style="color:aliceblue;" th:text="${cadastro.cpf}"></h2>
+    <h2 style="color:aliceblue;" th:text="${cadastro.telefone}"></h2>
+    <h2 style="color:aliceblue;" th:text="${cadastro.email}"></h2>
+
+    <br></br> <br></br> <br></br>
+
+    <a style="font-family: 'Times New Roman', Times, serif; color:aliceblue; font-size: 20px;" href="/">Voltar ao início</a>
+
+</body>
+</html>

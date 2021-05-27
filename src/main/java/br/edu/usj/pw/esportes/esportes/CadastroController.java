@@ -39,11 +39,14 @@ public class CadastroController {
         cadastroRepository.save(cadastro);
 
         //criar template
+        ModelAndView modelAndView = new ModelAndView("detalhes");
+
         //popular o template
+        modelAndView.addObject("cadastro", cadastro);
+
         //retornar
 
-        
-        return null;
+        return modelAndView;
     }
     
     
