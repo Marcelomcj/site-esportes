@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dethales</title>
+    <title>Detalhes</title>
 </head>
 <body style="background-color: rgb(5, 51, 5);">
 
@@ -15,10 +15,16 @@
     <h2 style="color:aliceblue;" th:text="${cadastro.cpf}"></h2>
     <h2 style="color:aliceblue;" th:text="${cadastro.telefone}"></h2>
     <h2 style="color:aliceblue;" th:text="${cadastro.email}"></h2>
+    <br></br>
+
+    <ul>
+        <li style="color:aliceblue; font-size:20px; font-family: Arial, Helvetica, sans-serif;" th:each="cadastro : ${lista}"><a style="color: aliceblue" th:href="@{/detalhes/{id}(id=${cadastro.id})}" th:text="${cadastro.nome}"></a></li>
+    </ul>
 
     <br></br> <br></br> <br></br>
 
     <a style="font-family: 'Times New Roman', Times, serif; color:aliceblue; font-size: 20px;" href="/">Voltar ao início</a>
-
+    <br></br>
+    <a style="font-family: 'Times New Roman', Times, serif; color:aliceblue; font-size: 20px;" href="/cadastros">Visualizar Usuários Cadastrados</a>
 </body>
 </html>

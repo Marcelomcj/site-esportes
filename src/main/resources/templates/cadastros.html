@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros</title>
+</head>
+<body style="background-color: rgb(5, 51, 5);">
+
+    <h1 style="border: 5px solid black; background-color: antiquewhite; border-color:black; font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif, Courier, monospace; color: rgb(10, 10, 10); text-align: center;">Usuários Cadastrados</h1>
+    
+    <br></br> <br></br>
+
+    <ul>
+        <li style="color:aliceblue; font-size:20px; font-family: Arial, Helvetica, sans-serif;" th:each="cadastro : ${lista}">
+            <a style="color: aliceblue" th:href="@{/detalhes/{id}(id=${cadastro.id})}" th:text="${cadastro.nome}"></a>
+        <br>
+        <a style="color: aliceblue" th:href="@{/editar/{id}(id=${cadastro.id})}">Editar</a>
+        <a style="color: aliceblue" th:href="@{/deletar/{id}(id=${cadastro.id})}">Deletar</a>
+    </li>
+    </ul>
+   
+    <br></br> <br></br>
+
+    <a style="font-family: 'Times New Roman', Times, serif; color:aliceblue; font-size: 20px;" href="/">Voltar ao início</a>
+    <br></br>
+    <a style="font-family: 'Times New Roman', Times, serif; color:aliceblue; font-size: 20px;" href="/cadastros">Visualizar Usuários Cadastrados</a>
+</body>
+</html>

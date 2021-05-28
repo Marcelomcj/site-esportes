@@ -17,7 +17,7 @@ public class Cadastro {
     
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     Long id;
 
 
